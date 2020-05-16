@@ -1,0 +1,219 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/*CHAT CUSTOM*/
+.outerContainer-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 100vh;*/
+  background: rgb(15,82,208);
+  background: linear-gradient(78deg, rgba(15,82,208,1) 9%, rgba(15,104,208,1) 33%, rgba(62,54,138,1) 51%, rgba(108,54,138,1) 69%, rgba(88,24,124,1) 81%);
+}
+
+.container-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*background: #FFFFFF;*/
+  border-radius: 8px;
+  height: 65%;
+  width: 40%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .outerContainer-custom {
+    height: 100vh;
+    /*height: 100%;*/
+
+  }
+
+  .container-custom {
+    width: 100%;
+    height: 100vh;
+    /*height: 100%;*/
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .container-custom {
+    width: 60%;
+  }
+}
+
+/*INFOBAR CUSTOM*/
+.infoBar-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2979FF;
+  border-radius: 4px 4px 0 0;
+  height: 60px;
+  width: 100%;
+}
+
+.leftInnerContainer-custom {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+  color: white;
+}
+
+.rightInnerContainer-custom {
+  display: flex;
+  flex: 0.5;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.onlineIcon-custom {
+  margin-right: 5%;
+}
+
+/*INPUT CUSTOM*/
+.form-custom {
+  display: flex;
+  border-top: 2px solid #D3D3D3;
+}
+
+.input-custom {
+  border: none;
+  border-radius: 0;
+  /*padding: 3%;*/
+  width: 80%;
+  /*font-size: 1.2em;*/
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+.sendButton-custom {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #2979FF;
+  display: inline-block;
+  border: none;
+  width: 20%;
+}
+
+/*MESSAGE CUSTOM*/
+.messageBox-custom {
+  background: #F3F3F3;
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: white;
+  display: inline-block;
+  max-width: 80%;
+}
+
+.messageText-custom {
+  width: 100%;
+  letter-spacing: 0;
+  float: left;
+  /*font-size: 1.1em;*/ 
+  word-wrap: break-word;
+}
+
+.messageText-custom img {
+  vertical-align: middle;
+}
+
+.messageContainer-custom {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 5%;
+  margin-top: 3px;
+}
+
+.sentText-custom {
+  display: flex;
+  align-items: center;
+  font-family: Helvetica;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.pl-10-custom {
+  padding-left: 10px;
+}
+
+.pr-10-custom {
+  padding-right: 10px;
+}
+
+.justifyStart-custom {
+  justify-content: flex-start;
+}
+
+.justifyEnd-custom {
+  justify-content: flex-end;
+}
+
+.colorWhite-custom {
+  color: white;
+}
+
+.colorDark-custom {
+  color: #353535;
+}
+
+.backgroundBlue-custom {
+  background: #2979FF;
+}
+
+.backgroundLight-custom {
+  background: #F3F3F3;
+}
+
+/*MESSAGE CUSTOM*/
+.messages-custom {
+  padding: 5% 0;
+  overflow: auto;
+  flex: auto;
+}
+
+/*TEXTCONTAINER CUSTOM*/
+.textContainer-custom {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  color: white;
+  height: 60%;
+  justify-content: space-between;
+}
+
+.activeContainer-custom {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50%;
+}
+
+.activeItem-custom {
+  display: flex;
+  align-items: center;
+}
+
+.activeContaine-customr img {
+  padding-left: 10px;
+}
+
+.textContainer-custom h1 {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .textContainer-custom {
+    display: none;
+  }
+}
+
+/*BACKGROUND LOGIN FORM CUSTOM*/
+.bg-login-custom {
+  background: rgb(0,136,255);
+  background: radial-gradient(circle, rgba(0,136,255,1) 3%, rgba(233,122,228,1) 45%, rgba(0,98,255,1) 97%, rgba(0,168,219,1) 100%);
+}
