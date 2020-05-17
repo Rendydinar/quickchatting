@@ -20,36 +20,36 @@ Aplikasi Chatting Berbasis Website.
 ## Mulai
 **1. Clone repo ini** 
   ```sh 
-    $ git clone https://github.com/rendydinar/repo
+    $ git clone https://github.com/Rendydinar/quickchatting
   ```
 
 **2. Install & Setup**
 Proses installasi dan setup terbagi menjadi 2 bagian, server & client :
 #### Server
   ```sh
-    $ cd repo/server
+    $ cd quickchatting/server
 
     $ npm install
   ```
   #### Client
- _pertama, lakukan konfigurasi firebase anda di folder `repo/client/src/firebase`_ ***penting!**
+ _pertama, lakukan konfigurasi firebase anda di folder `quickchatting/client/src/firebase`_ ***penting!**
   ```sh
-    $ cd repo/client
+    $ cd quickchatting/client
 
     $ npm install
   ```
 **3. Jalankan Aplikasi**
    Untuk menjalankan aplikasi terdiri dari 2 bagian : 
   #### server
-  *repo/server*
+  *quickchatting/server*
   ```sh
-	$ cd repo/server
+	$ cd quickchatting/server
     $ npm run dev 
    ```
   #### client
-  *repo/client*
+  *quickchatting/client*
   ```sh
-	$ cd repo/client
+	$ cd quickchatting/client
     $ npm start 
    ```
    Pergi ke [localhost:3000](http://localhost:3000/) 
@@ -57,4 +57,4 @@ Proses installasi dan setup terbagi menjadi 2 bagian, server & client :
 
 ## Bugs and Issues
 
-Punya bug, saran atau pertanyaan? [Buka masalah baru](https://github.com/rendydinar/repo/issues/new) di sini di GitHub.
+Punya bug, saran atau pertanyaan? [Buka masalah baru](https://github.com/Rendydinar/quickchatting/issues/new) di sini di GitHub.
