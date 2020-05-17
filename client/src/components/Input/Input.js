@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Input({ message, onWrite, sendMessage }) {
+export default function Input({ message, onWrite, sendMessage, loadingSendMsg }) {
 	return (
 		<div>
 			<form className="form-custom">
@@ -12,7 +12,11 @@ export default function Input({ message, onWrite, sendMessage }) {
 				  value={message}
 				  onChange={(e) => onWrite(e.target.value)}
 				></textarea>
-				<button className="sendButton-custom" onClick={(e) => sendMessage(e)}>Kirim</button>
+				<button 
+				  className="sendButton-custom" 
+				  onClick={(e) => sendMessage(e)}
+				  disabled={loadingSendMsg}
+				>Kirim</button>
 			</form>
 		</div>
 	)

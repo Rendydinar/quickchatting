@@ -17,6 +17,7 @@ const Chat = ({ location }) => {
 	const [message, setMessage] = useState('');	
 	const [messages, setMessages] = useState([]);
 	const [userOnWrite, setUserOnWrite] = useState({user: '', text: ''});
+	const [loadingSendMsg, setLoadingSendMsg] = useState(false);
 	// const ENDPOINT = 'https://your_server.herokuapp.com/'; // ketika mode production
 	const ENDPOINT = 'localhost:5000/';
 
@@ -78,10 +79,12 @@ const Chat = ({ location }) => {
 	// Fungsi untuk menghadle pengiriman pesan
 	const sendMessage =(e) => {
 		e.preventDefault();
-
 		if(message) {
+			setLoadingSendMsg(true);
+			// alert(message);
 			socket.emit('sendMessage', message, () => { 
 				setMessage('');
+				setLoadingSendMsg(false);
 			});
 		}
 	};	
@@ -95,9 +98,8 @@ const Chat = ({ location }) => {
 		<div className="h-screen outerContainer-custom ">
 			<div className="container-custom shadow-2xl bg-transparent">
 				<MemoizedInfoBarComponent room={room} imgurl={imgurl} />
-				<Messages messages={messages} name={name} onUserWrite={userOnWrite} />
-				
-				<Input message={message} onWrite={onWrite} sendMessage={sendMessage} />
+				<MemoizedMessagesComponent messages={messages} name={name} onUserWrite={userOnWrite} />
+				<MemoizedInputComponent message={message} onWrite={onWrite} sendMessage={sendMessage} loadingSendMsg={loadingSendMsg} />
 			</div>
 			<MemoizedTextContainerComponent users={users} />
 		</div>
@@ -108,6 +110,8 @@ export default Chat;
 
 const MemoizedInfoBarComponent = React.memo(InfoBar, isEqual);
 const MemoizedTextContainerComponent = React.memo(TextContainer, isEqual);
+const MemoizedInputComponent = React.memo(Input, isEqual);
+const MemoizedMessagesComponent = React.memo(Messages, isEqual);
 
 
 
