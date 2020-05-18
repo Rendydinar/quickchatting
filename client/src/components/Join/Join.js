@@ -31,6 +31,7 @@ const Join = () => {
 
 	const handleChangeImageProfile = e => {
 		if(e.target.files[0]) {
+			const img = e.target.files[0];
 			/** 
 			 * Cek tipe file yang di upload
 			 * Jika file bukan format gambar maka jangan mengupload ke firebase storage
@@ -39,7 +40,7 @@ const Join = () => {
 			if(img.type === 'image/png' || img.type === 'image/jpg' || img.type === 'image/jpeg' || img.type === 'image/gif') {
 				setIsLoadingUpload(true);
 
-				const img = e.target.files[0];
+
 				// API STORAGE FIREABASE UNTUK MEMBUAT DIREKTORI/PENYIMPANA FILE
 				const uploadTask = storage.ref(`quickchatting/${img.name}`).put(img);
 
